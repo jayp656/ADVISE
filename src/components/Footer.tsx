@@ -86,9 +86,17 @@ export default function Footer() {
         <p className="text-xs" style={{ color: "rgba(237,232,223,0.2)", letterSpacing: "0.08em" }}>
           © 2025 Summit Lot · Advisory services only · Not a licensed contractor · DRE License Pending
         </p>
-        <p className="text-xs" style={{ color: "rgba(237,232,223,0.15)" }}>
-          Jason Umana · San Diego County, CA
-        </p>
+        <div style={{ display: "flex", gap: 20, alignItems: "center" }}>
+          <p className="text-xs" style={{ color: "rgba(237,232,223,0.15)" }}>
+            Jason Umana · San Diego County, CA
+          </p>
+          <a href="/careers" className="text-xs" style={{ color: "rgba(237,232,223,0.12)", textDecoration: "none", letterSpacing: "0.1em" }}
+            onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "rgba(156,128,96,0.5)")}
+            onMouseLeave={(e) => ((e.target as HTMLElement).style.color = "rgba(237,232,223,0.12)")}
+          >
+            Careers
+          </a>
+        </div>
       </div>
     </footer>
   );

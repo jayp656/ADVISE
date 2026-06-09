@@ -11,7 +11,6 @@ import SectionNeighborhood from "@/components/SectionNeighborhood";
 import CityScapeSplit from "@/components/CityScapeSplit";
 import SectionCityLights from "@/components/SectionCityLights";
 import SectionDiscovery from "@/components/SectionDiscovery";
-import SectionCareers from "@/components/SectionCareers";
 import SectionFinalMoment from "@/components/SectionFinalMoment";
 import Footer from "@/components/Footer";
 import FilmGrain from "@/components/FilmGrain";
@@ -60,9 +59,6 @@ export default function Home() {
 
       {/* Scene 8: Discovery Engine */}
       <SectionDiscovery />
-
-      {/* Scene 8.5: Careers */}
-      <SectionCareers />
 
       {/* Scene 9: The Moment */}
       <SectionFinalMoment />

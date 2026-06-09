@@ -3,8 +3,10 @@ import { useEffect, useRef, useState } from "react";
 
 const OPEN_ROLE = {
   title: "Assistant — Property Strategy",
-  type: "Entry Level · Internship",
-  location: "San Diego, CA",
+  type: "Entry Level · Hybrid",
+  location: "San Diego, CA · Hybrid",
+  compensation: "$35 / hr",
+  education: "Bachelor's degree in Real Estate, Business, Finance, or related field",
   desc: "We're looking for a sharp, curious person who wants to learn the full picture of real estate — not just how to build, but how to think. You'll work directly alongside the founder on client properties: research, analysis, coordination, and design support.",
   responsibilities: [
     "Property research and market comp analysis",
@@ -14,11 +16,11 @@ const OPEN_ROLE = {
     "Help manage project timelines and documentation",
   ],
   qualities: [
-    "Curious about real estate, design, and finance",
+    "Bachelor's degree in Real Estate, Business, Finance, or related field",
+    "Curious about real estate, design, and investment strategy",
     "Detail-oriented and self-directed",
     "Strong written and visual communication",
-    "Interest in San Diego property market",
-    "No prior experience required — drive matters more",
+    "Interest in the San Diego property market",
   ],
 };
 
@@ -162,6 +164,15 @@ export default function SectionCareers() {
                 padding: "5px 12px",
               }}>
                 {OPEN_ROLE.type}
+              </span>
+              <span style={{
+                fontFamily: "var(--font-cormorant), Georgia, serif",
+                fontSize: 22,
+                fontWeight: 300,
+                color: "#9C8060",
+                letterSpacing: "-0.01em",
+              }}>
+                {OPEN_ROLE.compensation}
               </span>
               <span style={{
                 fontSize: 9,
