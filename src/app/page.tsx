@@ -2,6 +2,7 @@ import Nav from "@/components/Nav";
 import SectionHero from "@/components/SectionHero";
 import AmbientScene3D from "@/components/AmbientScene3D";
 import SectionOpportunities from "@/components/SectionOpportunities";
+import SectionStrategy from "@/components/SectionStrategy";
 import SectionInterior from "@/components/SectionInterior";
 import SectionInteriorDesign from "@/components/SectionInteriorDesign";
 import ProjectSpread from "@/components/ProjectSpread";
@@ -31,6 +32,9 @@ export default function Home() {
 
       {/* Scene 3: ADU Opportunities */}
       <SectionOpportunities />
+
+      {/* Scene 3.5: The Summit Lot Difference */}
+      <SectionStrategy />
 
       {/* Scene 4: The Finished Interior */}
       <SectionInterior />
