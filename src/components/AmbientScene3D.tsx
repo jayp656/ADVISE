@@ -363,8 +363,8 @@ export default function AmbientScene3D() {
             maxWidth: 360,
           }}
         >
-          Architectural analysis reveals value the eye doesn&apos;t naturally see.
-          Move your cursor to explore.
+          ADUs, renovations, interior design — every improvement builds income
+          or equity. We find which one your property needs most.
         </p>
       </div>
 

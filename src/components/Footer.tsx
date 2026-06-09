@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 
-const SERVICES = ["Property Feasibility", "ROI Analysis", "Financing Strategy", "Grant Identification", "Asset Management", "Leasing"];
+const SERVICES = ["ADU Development", "Garage Conversion", "Kitchen Renovation", "Bath Remodel", "Interior Design", "Financing Strategy", "Grant Identification", "ROI Analysis", "Asset Management", "Leasing"];
 const AREAS = ["San Diego", "Chula Vista", "Escondido", "El Cajon", "Santee", "La Mesa", "Lemon Grove", "National City", "Encinitas", "Oceanside", "Carlsbad", "Vista"];
 
 export default function Footer() {
