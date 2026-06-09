@@ -25,9 +25,9 @@ const PHOTOS = [
 ];
 
 const STATS = [
-  { value: "$400 – $800", label: "More per month\nwith premium finish" },
-  { value: "18 – 24%", label: "Rent premium over\nunfinished units" },
-  { value: "< 7 days", label: "Average days to lease\na designed unit" },
+  { value: "$550 – $1,000", label: "More per month\nwith premium finish" },
+  { value: "18 – 26%", label: "Rent premium over\nunfinished units" },
+  { value: "< 6 days", label: "Average days to lease\na designed unit" },
 ];
 
 export default function SectionInteriorDesign() {

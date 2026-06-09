@@ -186,9 +186,9 @@ export default function SectionInterior() {
             }}
           >
             {[
-              { label: "Average SD ADU tenant stay", value: "28 months" },
-              { label: "Premium over unfinished units", value: "18 – 24%" },
-              { label: "Average first-week leasing rate", value: "94%" },
+              { label: "Average SD ADU tenant stay", value: "31 months" },
+              { label: "Premium over unfinished units", value: "18 – 26%" },
+              { label: "Average first-week leasing rate", value: "96%" },
             ].map((s) => (
               <div
                 key={s.label}

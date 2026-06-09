@@ -7,7 +7,7 @@ const BUILDS = [
     title: "Myrtle Avenue",
     location: "Normal Heights · San Diego",
     type: "Garage Conversion",
-    metric: "$2,100 / mo",
+    metric: "$2,650 / mo",
     image: "https://ceimsgmzh6rmomfx.public.blob.vercel-storage.com/photos/1780968438544-IMG_7843.webp",
   },
   {
@@ -15,7 +15,7 @@ const BUILDS = [
     title: "Cable Street",
     location: "Ocean Beach · San Diego",
     type: "Garage ADU + Loft",
-    metric: "$2,400 / mo",
+    metric: "$3,100 / mo",
     image: "https://ceimsgmzh6rmomfx.public.blob.vercel-storage.com/photos/1780968428354-IMG_7839.jpeg",
   },
   {
@@ -23,7 +23,7 @@ const BUILDS = [
     title: "Granada Avenue",
     location: "North Park · San Diego",
     type: "Detached ADU",
-    metric: "$2,950 / mo",
+    metric: "$3,400 / mo",
     image: "https://ceimsgmzh6rmomfx.public.blob.vercel-storage.com/photos/1780968419667-IMG_7837.jpeg",
   },
   {
@@ -31,7 +31,7 @@ const BUILDS = [
     title: "Cedar Street",
     location: "Kensington · San Diego",
     type: "Detached ADU",
-    metric: "$2,600 / mo",
+    metric: "$3,100 / mo",
     image: "https://ceimsgmzh6rmomfx.public.blob.vercel-storage.com/photos/1780968423164-IMG_7838.jpeg",
   },
   {
@@ -39,7 +39,7 @@ const BUILDS = [
     title: "Marlborough Drive",
     location: "South Park · San Diego",
     type: "Detached ADU",
-    metric: "$3,200 / mo",
+    metric: "$3,500 / mo",
     image: "https://ceimsgmzh6rmomfx.public.blob.vercel-storage.com/photos/1780968437686-IMG_7842.jpeg",
   },
   {
@@ -47,7 +47,7 @@ const BUILDS = [
     title: "Soledad Road",
     location: "La Jolla · San Diego County",
     type: "Luxury ADU",
-    metric: "$3,800 / mo",
+    metric: "$4,800 / mo",
     image: "https://ceimsgmzh6rmomfx.public.blob.vercel-storage.com/photos/1780968432147-IMG_7840.jpeg",
   },
   {
@@ -55,7 +55,7 @@ const BUILDS = [
     title: "Encanto Drive",
     location: "Encanto · San Diego",
     type: "Detached ADU",
-    metric: "$2,750 / mo",
+    metric: "$2,900 / mo",
     image: "https://ceimsgmzh6rmomfx.public.blob.vercel-storage.com/photos/1780969578661-IMG_7845.jpeg",
   },
   {
@@ -63,7 +63,7 @@ const BUILDS = [
     title: "Sunset Reserve",
     location: "Mission Valley · San Diego",
     type: "Detached ADU",
-    metric: "$3,100 / mo",
+    metric: "$3,450 / mo",
     image: "https://ceimsgmzh6rmomfx.public.blob.vercel-storage.com/photos/1780969579854-IMG_7847.jpeg",
   },
 ];
