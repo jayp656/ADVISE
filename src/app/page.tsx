@@ -3,8 +3,11 @@ import SectionHero from "@/components/SectionHero";
 import AmbientScene3D from "@/components/AmbientScene3D";
 import SectionOpportunities from "@/components/SectionOpportunities";
 import SectionInterior from "@/components/SectionInterior";
+import SectionInteriorDesign from "@/components/SectionInteriorDesign";
+import ProjectSpread from "@/components/ProjectSpread";
 import HorizontalGallery3D from "@/components/HorizontalGallery3D";
 import SectionNeighborhood from "@/components/SectionNeighborhood";
+import CityScapeSplit from "@/components/CityScapeSplit";
 import SectionCityLights from "@/components/SectionCityLights";
 import SectionDiscovery from "@/components/SectionDiscovery";
 import SectionFinalMoment from "@/components/SectionFinalMoment";
@@ -32,11 +35,20 @@ export default function Home() {
       {/* Scene 4: The Finished Interior */}
       <SectionInterior />
 
+      {/* Scene 4.5: Interior Design — rental optimization */}
+      <SectionInteriorDesign />
+
+      {/* Scene 5: Project spread — before / after / transformation */}
+      <ProjectSpread />
+
       {/* Scene 5: 3D Horizontal Gallery — every unique build */}
       <HorizontalGallery3D />
 
       {/* Scene 6: The Neighborhood */}
       <SectionNeighborhood />
+
+      {/* Scene 6.5: City Magazine Spread */}
+      <CityScapeSplit />
 
       {/* Scene 7: City Scale */}
       <SectionCityLights />

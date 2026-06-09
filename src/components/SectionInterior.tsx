@@ -48,8 +48,8 @@ export default function SectionInterior() {
         >
           {/* Primary interior image */}
           <img
-            src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1600&q=90&fit=crop&crop=center"
-            alt="Finished ADU interior — modern minimal living space"
+            src="https://ceimsgmzh6rmomfx.public.blob.vercel-storage.com/photos/1780967042904-IMG_7832.webp"
+            alt="Finished ADU interior — designed bedroom with built-in shelving"
             style={{
               width: "100%",
               height: "100%",
