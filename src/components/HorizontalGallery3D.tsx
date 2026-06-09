@@ -1,54 +1,62 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const BUILDS = [
   {
     num: "01",
-    title: "Boundary Street",
-    location: "North Park · San Diego",
-    type: "Detached ADU",
-    metric: "$2,950 / mo",
-    image: "https://images.unsplash.com/photo-1668015642451-a3bb11afb441?w=900&q=82&fit=crop",
+    title: "Myrtle Avenue",
+    location: "Normal Heights · San Diego",
+    type: "Garage Conversion",
+    metric: "$2,100 / mo",
+    image: "https://ceimsgmzh6rmomfx.public.blob.vercel-storage.com/photos/1780968438544-IMG_7843.webp",
   },
   {
     num: "02",
-    title: "Coastal Reserve",
-    location: "Encinitas · San Diego County",
-    type: "ADU + House Hack",
-    metric: "14 mo to zero mortgage",
-    image: "https://images.unsplash.com/photo-1700110615373-91b4ffc37067?w=900&q=82&fit=crop",
+    title: "Cable Street",
+    location: "Ocean Beach · San Diego",
+    type: "Garage ADU + Loft",
+    metric: "$2,400 / mo",
+    image: "https://ceimsgmzh6rmomfx.public.blob.vercel-storage.com/photos/1780968428354-IMG_7839.jpeg",
   },
   {
     num: "03",
-    title: "Cable Street",
-    location: "Ocean Beach · San Diego",
-    type: "Garage Conversion ADU",
-    metric: "$2,400 / mo",
-    image: "https://images.unsplash.com/photo-1719324923613-ff0884b031ed?w=900&q=82&fit=crop",
+    title: "Granada Avenue",
+    location: "North Park · San Diego",
+    type: "Detached ADU",
+    metric: "$2,950 / mo",
+    image: "https://ceimsgmzh6rmomfx.public.blob.vercel-storage.com/photos/1780968419667-IMG_7837.jpeg",
   },
   {
     num: "04",
-    title: "Marlborough Drive",
+    title: "Cedar Street",
     location: "Kensington · San Diego",
-    type: "SB9 Lot Split",
-    metric: "2 units by-right",
-    image: "https://images.unsplash.com/photo-1660361338485-c926a27d4eb8?w=900&q=82&fit=crop",
+    type: "Detached ADU",
+    metric: "$2,600 / mo",
+    image: "https://ceimsgmzh6rmomfx.public.blob.vercel-storage.com/photos/1780968423164-IMG_7838.jpeg",
   },
   {
     num: "05",
-    title: "Harbor Crown",
-    location: "Chula Vista · San Diego County",
-    type: "Value-Add Multi-Unit",
-    metric: "+38% NOI",
-    image: "https://images.unsplash.com/photo-1773099032238-6aaee4fb7f18?w=900&q=82&fit=crop",
+    title: "Marlborough Drive",
+    location: "South Park · San Diego",
+    type: "Detached ADU",
+    metric: "$3,200 / mo",
+    image: "https://ceimsgmzh6rmomfx.public.blob.vercel-storage.com/photos/1780968437686-IMG_7842.jpeg",
   },
   {
     num: "06",
-    title: "The Meridian",
-    location: "North Park · San Diego",
-    type: "Garage ADU + JADU",
-    metric: "$40K CalHFA Grant",
-    image: "https://images.unsplash.com/photo-1735987928098-c512af56d1a9?w=900&q=82&fit=crop",
+    title: "Soledad Road",
+    location: "La Jolla · San Diego County",
+    type: "Luxury ADU",
+    metric: "$3,800 / mo",
+    image: "https://ceimsgmzh6rmomfx.public.blob.vercel-storage.com/photos/1780968432147-IMG_7840.jpeg",
+  },
+  {
+    num: "07",
+    title: "Felton Street",
+    location: "Mission Hills · San Diego",
+    type: "SB9 Lot Split",
+    metric: "2 units by-right",
+    image: "https://ceimsgmzh6rmomfx.public.blob.vercel-storage.com/photos/1780968436356-IMG_7841.jpeg",
   },
 ];
 
@@ -58,12 +66,21 @@ const GAP = 28;
 const TOTAL_MOVE = (CARD_W + GAP) * (BUILDS.length - 1);
 
 export default function HorizontalGallery3D() {
+  // null = not yet detected, false = desktop, true = mobile
+  const [isMobile, setIsMobile] = useState<boolean | null>(null);
   const wrapperRef = useRef<HTMLDivElement>(null);
   const stickyRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
+    setIsMobile(window.innerWidth < 768 || !window.matchMedia("(hover: hover)").matches);
+  }, []);
+
+  useEffect(() => {
+    // Only init GSAP once we've confirmed the user is on desktop
+    if (isMobile !== false) return;
+
     const wrapper = wrapperRef.current;
     const sticky = stickyRef.current;
     const track = trackRef.current;
@@ -98,7 +115,6 @@ export default function HorizontalGallery3D() {
                 const scale = 1 - Math.min(abs * 0.055, 0.2);
                 const brightness = 1 - Math.min(abs * 0.16, 0.5);
                 const tz = abs < 0.9 ? (0.9 - abs) * 55 : 0;
-                // Single style string is faster than multiple setProperty calls
                 card.style.transform = `rotateY(${rotY.toFixed(1)}deg) translateZ(${tz.toFixed(1)}px) scale(${scale.toFixed(3)})`;
                 card.style.filter = `brightness(${brightness.toFixed(3)})`;
               });
@@ -110,7 +126,39 @@ export default function HorizontalGallery3D() {
 
     init().catch(console.error);
     return () => ctx?.revert();
-  }, []);
+  }, [isMobile]);
+
+  // Show mobile carousel when not yet detected (null) or confirmed mobile (true)
+  if (isMobile !== false) {
+    return (
+      <div id="case-studies" style={{ background: "#070503", paddingBottom: 64 }}>
+        <div style={{ padding: "48px 20px 28px" }}>
+          <p style={{ fontSize: 9, letterSpacing: "0.32em", textTransform: "uppercase", color: "rgba(156,128,96,0.5)", fontFamily: "var(--font-dm-sans), sans-serif", marginBottom: 10 }}>
+            Built in San Diego County
+          </p>
+          <h2 style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontSize: "clamp(28px,8vw,44px)", fontWeight: 300, color: "#EDE8DF", letterSpacing: "-0.025em", lineHeight: 1.05, margin: 0 }}>
+            Every build.<span style={{ opacity: 0.35 }}> A different story.</span>
+          </h2>
+        </div>
+        <div className="mob-gallery" style={{ display: "flex", overflowX: "auto", gap: 12, padding: "0 20px", scrollSnapType: "x mandatory", WebkitOverflowScrolling: "touch" as "touch", scrollbarWidth: "none" }}>
+          {BUILDS.map((b) => (
+            <div key={b.num} style={{ flexShrink: 0, width: "78vw", maxWidth: 300, height: 420, position: "relative", overflow: "hidden", scrollSnapAlign: "start", borderRadius: 2 }}>
+              <img src={b.image} alt={b.title} loading="lazy" decoding="async" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
+              <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(7,5,3,0.95) 0%, rgba(7,5,3,0.2) 55%)" }} />
+              <div style={{ position: "absolute", top: 14, left: 14, fontSize: 8, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(156,128,96,0.85)", fontFamily: "var(--font-dm-sans), sans-serif", border: "1px solid rgba(156,128,96,0.25)", padding: "3px 9px", background: "rgba(7,5,3,0.6)", backdropFilter: "blur(6px)" }}>
+                {b.type}
+              </div>
+              <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "0 18px 18px" }}>
+                <p style={{ fontSize: 8, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(156,128,96,0.6)", fontFamily: "var(--font-dm-sans), sans-serif", marginBottom: 6 }}>{b.location}</p>
+                <h3 style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontSize: 26, fontWeight: 300, color: "#EDE8DF", letterSpacing: "-0.02em", lineHeight: 1, margin: "0 0 8px" }}>{b.title}</h3>
+                <p style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontSize: 18, fontWeight: 300, color: "rgba(156,128,96,0.9)" }}>{b.metric}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div

@@ -1,16 +1,18 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 
+const B = "https://ceimsgmzh6rmomfx.public.blob.vercel-storage.com/photos/";
+
 const CELLS = [
-  { img: "photo-1600596542815-ffad4c1539a9", crop: "center", label: "ADU · North Park", delay: 0.05 },
-  { img: "photo-1668015642451-a3bb11afb441", crop: "center", label: "Garage Conv. · Ocean Beach", delay: 0.25 },
-  { img: "photo-1719324923613-ff0884b031ed", crop: "top", label: "SB9 Split · Kensington", delay: 0.45 },
-  { img: "photo-1660361338485-c926a27d4eb8", crop: "center", label: "ADU · Hillcrest", delay: 0.15 },
-  { img: "photo-1600596542815-ffad4c1539a9", crop: "left", label: "Jr. ADU · Mission Hills", delay: 0.55 },
-  { img: "photo-1668015642451-a3bb11afb441", crop: "bottom", label: "Addition · South Park", delay: 0.35 },
-  { img: "photo-1719324923613-ff0884b031ed", crop: "center", label: "ADU · Normal Heights", delay: 0.65 },
-  { img: "photo-1660361338485-c926a27d4eb8", crop: "top", label: "Conversion · Point Loma", delay: 0.75 },
-  { img: "photo-1657383543368-7d929944be6a", crop: "center", label: "Jr. ADU · City Heights", delay: 0.85 },
+  { src: `${B}1780968438544-IMG_7843.webp`, label: "Garage Conv. · Normal Heights", delay: 0.05 },
+  { src: `${B}1780968419667-IMG_7837.jpeg`, label: "Detached ADU · North Park",      delay: 0.25 },
+  { src: `${B}1780968428354-IMG_7839.jpeg`, label: "Garage ADU · Ocean Beach",        delay: 0.45 },
+  { src: `${B}1780968423164-IMG_7838.jpeg`, label: "Detached ADU · Kensington",       delay: 0.15 },
+  { src: `${B}1780968432147-IMG_7840.jpeg`, label: "Luxury ADU · La Jolla",           delay: 0.55 },
+  { src: `${B}1780936666215-IMG_7818.jpeg`, label: "Property · San Diego",            delay: 0.35 },
+  { src: `${B}1780968437686-IMG_7842.jpeg`, label: "Detached ADU · South Park",       delay: 0.65 },
+  { src: `${B}1780968436356-IMG_7841.jpeg`, label: "SB9 Split · Mission Hills",       delay: 0.75 },
+  { src: `${B}1780936668685-IMG_7817.jpeg`, label: "Property · San Diego",            delay: 0.85 },
 ];
 
 export default function SectionNeighborhood() {
@@ -90,17 +92,18 @@ export default function SectionNeighborhood() {
           {CELLS.map((c, i) => (
             <div
               key={i}
+              className="nb-cell"
               style={{
                 position: "relative",
                 aspectRatio: "4/3",
-                overflow: "hidden",
                 opacity: visible ? 1 : 0,
                 transition: `opacity 1.6s ease ${c.delay}s`,
               }}
             >
               <img
-                src={`https://images.unsplash.com/${c.img}?w=600&q=80&fit=crop&crop=${c.crop}`}
+                src={c.src}
                 alt=""
+                className="nb-img"
                 style={{
                   width: "100%",
                   height: "100%",
