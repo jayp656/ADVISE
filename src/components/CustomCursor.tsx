@@ -6,6 +6,9 @@ export default function CustomCursor() {
   const ringRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Touch/mobile — leave native cursor intact
+    if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+
     const dot = dotRef.current;
     const ring = ringRef.current;
     if (!dot || !ring) return;
@@ -55,9 +58,15 @@ export default function CustomCursor() {
     tick();
     window.addEventListener("mousemove", onMove, { passive: true });
 
-    // Hide default cursor globally
+    // Hide default cursor globally — but keep text cursor on form fields
     const style = document.createElement("style");
-    style.textContent = "*, *::before, *::after { cursor: none !important; }";
+    style.textContent = `
+      *:not(input):not(textarea):not(select):not([contenteditable]),
+      *:not(input):not(textarea):not(select):not([contenteditable])::before,
+      *:not(input):not(textarea):not(select):not([contenteditable])::after {
+        cursor: none !important;
+      }
+    `;
     style.id = "cursor-hide";
     document.head.appendChild(style);
 

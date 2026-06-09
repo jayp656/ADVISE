@@ -27,6 +27,26 @@ export default function SectionFinalMoment() {
         overflow: "hidden",
       }}
     >
+      {/* Ghost watermark */}
+      <div style={{
+        position: "absolute", inset: 0, zIndex: 0,
+        display: "flex", alignItems: "center", justifyContent: "center",
+        pointerEvents: "none", overflow: "hidden",
+      }}>
+        <span style={{
+          fontFamily: "var(--font-cormorant), Georgia, serif",
+          fontSize: "clamp(120px, 22vw, 320px)",
+          fontWeight: 300,
+          color: "rgba(237,232,223,0.028)",
+          letterSpacing: "0.12em",
+          textTransform: "uppercase",
+          whiteSpace: "nowrap",
+          userSelect: "none",
+        }}>
+          Domaine
+        </span>
+      </div>
+
       {/* Property image — quiet, golden hour */}
       <img
         src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=2400&q=90&fit=crop&crop=center"
@@ -41,8 +61,27 @@ export default function SectionFinalMoment() {
           opacity: visible ? 0.42 : 0,
           transition: "opacity 3.2s ease",
           filter: "saturate(0.78) sepia(0.08)",
+          animation: visible ? "kenBurns 30s ease-in-out infinite alternate" : undefined,
+          transformOrigin: "center 38%",
         }}
       />
+
+      {/* Corner viewfinder marks */}
+      {(["tl","tr","bl","br"] as const).map((pos, i) => (
+        <div key={pos} style={{
+          position: "absolute", zIndex: 3, width: 22, height: 22,
+          top: pos.startsWith("t") ? 40 : undefined,
+          bottom: pos.startsWith("b") ? 40 : undefined,
+          left: pos.endsWith("l") ? 48 : undefined,
+          right: pos.endsWith("r") ? 48 : undefined,
+          borderTop: pos.startsWith("t") ? "1px solid rgba(156,128,96,0.3)" : undefined,
+          borderBottom: pos.startsWith("b") ? "1px solid rgba(156,128,96,0.3)" : undefined,
+          borderLeft: pos.endsWith("l") ? "1px solid rgba(156,128,96,0.3)" : undefined,
+          borderRight: pos.endsWith("r") ? "1px solid rgba(156,128,96,0.3)" : undefined,
+          opacity: visible ? 1 : 0,
+          transition: `opacity 1s ease ${1.6 + i * 0.15}s`,
+        }} />
+      ))}
       <div
         style={{
           position: "absolute",

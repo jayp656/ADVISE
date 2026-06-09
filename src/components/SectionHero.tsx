@@ -52,6 +52,57 @@ export default function SectionHero() {
         />
       </video>
 
+      {/* Letterbox bars — cinematic 2.39:1 */}
+      <div style={{
+        position: "absolute", top: 0, left: 0, right: 0, height: "7svh", minHeight: 44,
+        background: "#000", zIndex: 8,
+        transform: loaded ? "translateY(0)" : "translateY(-100%)",
+        transition: "transform 1.4s cubic-bezier(0.16,1,0.3,1) 0.2s",
+      }} />
+      <div style={{
+        position: "absolute", bottom: 0, left: 0, right: 0, height: "7svh", minHeight: 44,
+        background: "#000", zIndex: 8,
+        transform: loaded ? "translateY(0)" : "translateY(100%)",
+        transition: "transform 1.4s cubic-bezier(0.16,1,0.3,1) 0.2s",
+      }} />
+
+      {/* Aspect ratio label */}
+      <div style={{
+        position: "absolute", bottom: "calc(7svh + 16px)", right: 48, zIndex: 9,
+        fontSize: 8, letterSpacing: "0.24em", color: "rgba(156,128,96,0.35)",
+        fontFamily: "var(--font-dm-sans), sans-serif", textTransform: "uppercase",
+        opacity: loaded ? 1 : 0, transition: "opacity 1s ease 2.2s",
+      }}>
+        2.39 : 1
+      </div>
+
+      {/* Timecode */}
+      <div style={{
+        position: "absolute", top: "calc(7svh + 16px)", left: 48, zIndex: 9,
+        fontSize: 8, letterSpacing: "0.18em", color: "rgba(156,128,96,0.28)",
+        fontFamily: "var(--font-dm-sans), sans-serif",
+        opacity: loaded ? 1 : 0, transition: "opacity 1s ease 2.4s",
+      }}>
+        00 : 00 : 00 : 00
+      </div>
+
+      {/* Corner viewfinder marks */}
+      {(["tl","tr","bl","br"] as const).map((pos, i) => (
+        <div key={pos} style={{
+          position: "absolute", zIndex: 9, width: 20, height: 20,
+          top: pos.startsWith("t") ? "calc(7svh + 18px)" : undefined,
+          bottom: pos.startsWith("b") ? "calc(7svh + 18px)" : undefined,
+          left: pos.endsWith("l") ? 48 : undefined,
+          right: pos.endsWith("r") ? 48 : undefined,
+          borderTop: pos.startsWith("t") ? "1px solid rgba(156,128,96,0.35)" : undefined,
+          borderBottom: pos.startsWith("b") ? "1px solid rgba(156,128,96,0.35)" : undefined,
+          borderLeft: pos.endsWith("l") ? "1px solid rgba(156,128,96,0.35)" : undefined,
+          borderRight: pos.endsWith("r") ? "1px solid rgba(156,128,96,0.35)" : undefined,
+          opacity: loaded ? 1 : 0,
+          transition: `opacity 0.8s ease ${2 + i * 0.12}s`,
+        }} />
+      ))}
+
       {/* Bottom gradient — text legibility */}
       <div
         style={{
