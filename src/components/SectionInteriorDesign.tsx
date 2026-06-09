@@ -119,6 +119,7 @@ export default function SectionInteriorDesign() {
 
         {/* Photo grid */}
         <div
+          className="interior-grid"
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr)",
@@ -126,8 +127,9 @@ export default function SectionInteriorDesign() {
             gap: 3,
           }}
         >
-          {/* Tall left photo — spans 2 rows */}
+          {/* Tall left photo — spans 2 rows on desktop, full width on mobile */}
           <div
+            className="interior-tall"
             style={{
               gridRow: "1 / span 2",
               position: "relative",

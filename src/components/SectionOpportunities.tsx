@@ -221,8 +221,8 @@ export default function SectionOpportunities() {
         }}
       >
         <img
-          src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=2400&q=90&fit=crop&crop=center"
-          alt="San Diego residential property showing ADU potential"
+          src="https://ceimsgmzh6rmomfx.public.blob.vercel-storage.com/photos/1780969579854-IMG_7847.jpeg"
+          alt="San Diego property — ADU and renovation opportunity"
           style={{
             width: "100%",
             height: "100%",

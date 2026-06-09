@@ -243,7 +243,7 @@ export default function HorizontalGallery3D() {
                 <img
                   src={b.image}
                   alt={b.title}
-                  loading={i < 2 ? "eager" : "lazy"}
+                  loading={i < 3 ? "eager" : "lazy"}
                   decoding="async"
                   style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
                 />

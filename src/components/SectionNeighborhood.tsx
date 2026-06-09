@@ -103,12 +103,13 @@ export default function SectionNeighborhood() {
               <img
                 src={c.src}
                 alt=""
-                className="nb-img"
+                loading="lazy"
+                decoding="async"
                 style={{
                   width: "100%",
                   height: "100%",
                   objectFit: "cover",
-                  filter: "saturate(0.55) brightness(0.48)",
+                  filter: "saturate(0.78) brightness(0.68)",
                 }}
               />
               <div

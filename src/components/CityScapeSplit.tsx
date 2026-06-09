@@ -6,6 +6,8 @@ export default function CityScapeSplit() {
   const ref = useRef<HTMLElement>(null);
   const imgRef = useRef<HTMLDivElement>(null);
   const triggered = useRef(false);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const gsapCtx = useRef<any>(null);
 
   useEffect(() => {
     const obs = new IntersectionObserver(
@@ -26,20 +28,23 @@ export default function CityScapeSplit() {
       const { default: gsap } = await import("gsap");
       const { ScrollTrigger } = await import("gsap/ScrollTrigger");
       gsap.registerPlugin(ScrollTrigger);
-      if (imgRef.current && ref.current) {
-        gsap.to(imgRef.current, {
-          y: -70,
-          ease: "none",
-          scrollTrigger: {
-            trigger: ref.current,
-            start: "top bottom",
-            end: "bottom top",
-            scrub: true,
-          },
-        });
-      }
+      gsapCtx.current = gsap.context(() => {
+        if (imgRef.current && ref.current) {
+          gsap.to(imgRef.current, {
+            y: -70,
+            ease: "none",
+            scrollTrigger: {
+              trigger: ref.current,
+              start: "top bottom",
+              end: "bottom top",
+              scrub: 1,
+            },
+          });
+        }
+      });
     };
     initGsap();
+    return () => { gsapCtx.current?.revert(); };
   }, []);
 
   return (

@@ -19,6 +19,14 @@ export default function SectionCityLights() {
   const triggered = useRef(false);
 
   useEffect(() => {
+    // Size canvas to actual pixel dimensions before drawing
+    const canvas = canvasRef.current;
+    if (canvas) {
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = Math.round(window.innerWidth * dpr);
+      canvas.height = Math.round(window.innerHeight * dpr);
+    }
+
     const obs = new IntersectionObserver(
       ([e]) => {
         if (e.isIntersecting && !triggered.current) {
