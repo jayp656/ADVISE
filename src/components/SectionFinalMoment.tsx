@@ -35,10 +35,10 @@ export default function SectionFinalMoment() {
       }}>
         <span style={{
           fontFamily: "var(--font-cormorant), Georgia, serif",
-          fontSize: "clamp(120px, 22vw, 320px)",
+          fontSize: "clamp(80px, 14vw, 200px)",
           fontWeight: 300,
-          color: "rgba(237,232,223,0.028)",
-          letterSpacing: "0.12em",
+          color: "rgba(156,128,96,0.055)",
+          letterSpacing: "0.22em",
           textTransform: "uppercase",
           whiteSpace: "nowrap",
           userSelect: "none",
@@ -107,20 +107,18 @@ export default function SectionFinalMoment() {
           textAlign: "center",
         }}
       >
-        <p
+        <img
+          src="https://ceimsgmzh6rmomfx.public.blob.vercel-storage.com/photos/1780978715619-5428C628-F649-4F06-9765-48AFF403A02C.png"
+          alt="Summit Lot"
           style={{
-            fontSize: 9,
-            letterSpacing: "0.3em",
-            textTransform: "uppercase",
-            color: "rgba(156,128,96,0.5)",
-            fontFamily: "var(--font-dm-sans), sans-serif",
-            marginBottom: 36,
-            opacity: visible ? 1 : 0,
+            width: "clamp(160px, 18vw, 260px)",
+            height: "auto",
+            objectFit: "contain",
+            marginBottom: 44,
+            opacity: visible ? 0.9 : 0,
             transition: "opacity 1.5s ease 1s",
           }}
-        >
-          Summit Lot · San Diego County
-        </p>
+        />
 
         <h2
           style={{

@@ -123,6 +123,46 @@ export default function SectionHero() {
         }}
       />
 
+      {/* Brand mark — top center */}
+      <div style={{
+        position: "absolute",
+        top: "calc(7svh + 32px)",
+        left: 0,
+        right: 0,
+        zIndex: 9,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        gap: 0,
+        opacity: loaded ? 1 : 0,
+        transition: "opacity 2s ease 0.8s",
+        pointerEvents: "none",
+      }}>
+        <p style={{
+          fontFamily: "var(--font-cormorant), Georgia, serif",
+          fontSize: "clamp(22px, 2.8vw, 42px)",
+          fontWeight: 300,
+          letterSpacing: "0.42em",
+          color: "#9C8060",
+          textTransform: "uppercase",
+          lineHeight: 1,
+          margin: 0,
+        }}>
+          Summit Lot
+        </p>
+        <div style={{ width: 48, height: 1, background: "rgba(156,128,96,0.3)", margin: "10px 0 8px" }} />
+        <p style={{
+          fontSize: 8,
+          letterSpacing: "0.36em",
+          textTransform: "uppercase",
+          color: "rgba(156,128,96,0.45)",
+          fontFamily: "var(--font-dm-sans), sans-serif",
+          margin: 0,
+        }}>
+          Real Estate Investments
+        </p>
+      </div>
+
       <div
         style={{
           position: "relative",
