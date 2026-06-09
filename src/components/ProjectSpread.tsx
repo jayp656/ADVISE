@@ -84,7 +84,7 @@ export default function ProjectSpread() {
       }}>
         {[
           { label: "Time to Complete", value: "5 months" },
-          { label: "Monthly Rent", value: "$2,400 / mo" },
+          { label: "Monthly Rent", value: "$2,950 / mo" },
           { label: "Payback Period", value: "3.9 yrs" },
         ].map((m, i) => (
           <div key={m.label} style={{
