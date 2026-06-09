@@ -148,7 +148,7 @@ export default function HeroSection() {
         <div className="px-6 md:px-12 lg:px-16 pt-6">
           <nav className="liquid-glass rounded-xl px-4 py-2 flex items-center justify-between">
             <span className="text-2xl font-semibold tracking-tight text-white">
-              Domaine
+              Summit Lot
             </span>
 
             <div className="hidden md:flex items-center gap-8">

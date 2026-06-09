@@ -43,7 +43,7 @@ export default function SectionFinalMoment() {
           whiteSpace: "nowrap",
           userSelect: "none",
         }}>
-          Domaine
+          Summit Lot
         </span>
       </div>
 
@@ -119,7 +119,7 @@ export default function SectionFinalMoment() {
             transition: "opacity 1.5s ease 1s",
           }}
         >
-          Domaine · San Diego County
+          Summit Lot · San Diego County
         </p>
 
         <h2
@@ -237,7 +237,7 @@ export default function SectionFinalMoment() {
             transition: "opacity 1s ease 2.5s",
           }}
         >
-          Domaine Co. · Property Intelligence Advisory · San Diego County · Est. 2019
+          Summit Lot Co. · Property Intelligence Advisory · San Diego County · Est. 2019
         </p>
       </div>
     </section>

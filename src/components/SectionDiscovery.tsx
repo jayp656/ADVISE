@@ -389,7 +389,7 @@ export default function SectionDiscovery() {
                 <p style={{
                   fontSize: 13, color: "rgba(237,232,223,0.55)", fontFamily: "var(--font-dm-sans), sans-serif", lineHeight: 1.7,
                 }}>
-                  A Domaine advisor will review your parcel and follow up within 24 hours
+                  A Summit Lot advisor will review your parcel and follow up within 24 hours
                   with a full site analysis, design options, and projected returns.
                 </p>
               </div>

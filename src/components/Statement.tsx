@@ -109,7 +109,7 @@ export default function Statement() {
             letterSpacing: "0.08em",
           }}
         >
-          Jason Umana, Founder · Domaine Co.
+          Jason Umana, Founder · Summit Lot
         </p>
         <div style={{ width: 32, height: 1, background: "rgba(156,128,96,0.4)" }} />
       </div>

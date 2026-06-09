@@ -23,10 +23,10 @@ const dmSans = M_PLUS_1p({
 const OG_IMAGE = "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=85&fit=crop";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.domaineco.com"),
+  metadataBase: new URL("https://www.summitlot.com"),
   title: {
-    default: "Domaine Co. | ADU & Property Intelligence — San Diego",
-    template: "%s | Domaine Co.",
+    default: "Summit Lot | ADU & Property Intelligence — San Diego",
+    template: "%s | Summit Lot",
   },
   description:
     "San Diego's property intelligence advisory. Discover hidden value in your home — ADU feasibility, garage conversions, SB9 lot splits, CalHFA grants, and ROI modeling. Most homeowners are leaving $40,000–$185,000 on the table.",
@@ -48,21 +48,21 @@ export const metadata: Metadata = {
     "ADU Hillcrest",
     "ADU Kensington",
     "ADU Encinitas",
-    "Domaine Co",
+    "Summit Lot",
   ],
-  authors: [{ name: "Jason Umana", url: "https://www.domaineco.com" }],
-  creator: "Domaine Co.",
-  publisher: "Domaine Co.",
+  authors: [{ name: "Jason Umana", url: "https://www.summitlot.com" }],
+  creator: "Summit Lot",
+  publisher: "Summit Lot",
   category: "Real Estate Advisory",
   alternates: {
-    canonical: "https://www.domaineco.com",
+    canonical: "https://www.summitlot.com",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.domaineco.com",
-    siteName: "Domaine Co.",
-    title: "Domaine Co. | Property Intelligence & ADU Advisory — San Diego",
+    url: "https://www.summitlot.com",
+    siteName: "Summit Lot",
+    title: "Summit Lot | Property Intelligence & ADU Advisory — San Diego",
     description:
       "Most San Diego properties hold more potential than their owners realize. Expert ADU feasibility, ROI modeling, and financing guidance for San Diego County homeowners.",
     images: [
@@ -70,17 +70,17 @@ export const metadata: Metadata = {
         url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Domaine Co. — San Diego Property Intelligence",
+        alt: "Summit Lot — San Diego Property Intelligence",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Domaine Co. | Property Intelligence — San Diego",
+    title: "Summit Lot | Property Intelligence — San Diego",
     description:
       "Most San Diego properties hold more potential than their owners realize. Discover yours.",
     images: [OG_IMAGE],
-    creator: "@domaineco",
+    creator: "@summitlot",
   },
   robots: {
     index: true,
@@ -103,12 +103,12 @@ const structuredData = {
   "@graph": [
     {
       "@type": "LocalBusiness",
-      "@id": "https://www.domaineco.com/#business",
-      name: "Domaine Co.",
+      "@id": "https://www.summitlot.com/#business",
+      name: "Summit Lot",
       description:
         "Property intelligence and ADU advisory for San Diego County homeowners. We reveal hidden value — ADU feasibility, garage conversions, SB9 lot splits, CalHFA grants, and ROI analysis.",
-      url: "https://www.domaineco.com",
-      logo: "https://www.domaineco.com/logo.png",
+      url: "https://www.summitlot.com",
+      logo: "https://www.summitlot.com/logo.png",
       image: OG_IMAGE,
       foundingDate: "2019",
       areaServed: [
@@ -149,19 +149,19 @@ const structuredData = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://www.domaineco.com/#website",
-      url: "https://www.domaineco.com",
-      name: "Domaine Co.",
+      "@id": "https://www.summitlot.com/#website",
+      url: "https://www.summitlot.com",
+      name: "Summit Lot",
       description: "Property Intelligence & ADU Advisory — San Diego County",
-      publisher: { "@id": "https://www.domaineco.com/#business" },
+      publisher: { "@id": "https://www.summitlot.com/#business" },
     },
     {
       "@type": "WebPage",
-      "@id": "https://www.domaineco.com/#webpage",
-      url: "https://www.domaineco.com",
-      name: "ADU Feasibility & Property Intelligence — San Diego | Domaine Co.",
-      isPartOf: { "@id": "https://www.domaineco.com/#website" },
-      about: { "@id": "https://www.domaineco.com/#business" },
+      "@id": "https://www.summitlot.com/#webpage",
+      url: "https://www.summitlot.com",
+      name: "ADU Feasibility & Property Intelligence — San Diego | Summit Lot",
+      isPartOf: { "@id": "https://www.summitlot.com/#website" },
+      about: { "@id": "https://www.summitlot.com/#business" },
       description:
         "Discover the hidden value in your San Diego property. ADU feasibility analysis, garage conversions, SB9 lot splits, CalHFA grant identification, and ROI modeling.",
       breadcrumb: {
@@ -171,7 +171,7 @@ const structuredData = {
             "@type": "ListItem",
             position: 1,
             name: "Home",
-            item: "https://www.domaineco.com",
+            item: "https://www.summitlot.com",
           },
         ],
       },
@@ -184,7 +184,7 @@ const structuredData = {
           name: "What is an ADU and can I build one in San Diego?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "An Accessory Dwelling Unit (ADU) is a secondary housing unit on your property — a detached cottage, garage conversion, or attached suite. California state law strongly favors ADU construction, and most San Diego residential lots qualify. Domaine analyzes your specific parcel to confirm feasibility.",
+            text: "An Accessory Dwelling Unit (ADU) is a secondary housing unit on your property — a detached cottage, garage conversion, or attached suite. California state law strongly favors ADU construction, and most San Diego residential lots qualify. Summit Lot analyzes your specific parcel to confirm feasibility.",
           },
         },
         {
@@ -208,7 +208,7 @@ const structuredData = {
           name: "What is SB9 and how does it apply in San Diego?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Senate Bill 9 (SB9) allows most California single-family homeowners to split their lot and build up to 4 units without a public hearing. This is a ministerial, by-right approval — your city cannot deny it for discretionary reasons. Domaine identifies SB9 opportunities and models the income potential.",
+            text: "Senate Bill 9 (SB9) allows most California single-family homeowners to split their lot and build up to 4 units without a public hearing. This is a ministerial, by-right approval — your city cannot deny it for discretionary reasons. Summit Lot identifies SB9 opportunities and models the income potential.",
           },
         },
       ],

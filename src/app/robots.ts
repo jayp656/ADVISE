@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/_next/"],
       },
     ],
-    sitemap: "https://www.domaineco.com/sitemap.xml",
-    host: "https://www.domaineco.com",
+    sitemap: "https://www.summitlot.com/sitemap.xml",
+    host: "https://www.summitlot.com",
   };
 }

@@ -340,7 +340,7 @@ export default function FinancingSection() {
               lineHeight: 1.65,
             }}
           >
-            Domaine analyzes every program your property qualifies for — and
+            Summit Lot analyzes every program your property qualifies for — and
             models the combined impact on your total project cost and return.
             Most owners are leaving $15,000–$40,000 on the table.
           </p>

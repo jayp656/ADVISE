@@ -11,17 +11,11 @@ export default function Footer() {
         {/* Brand */}
         <div className="md:col-span-1">
           <div className="mb-4">
-            <span
-              style={{
-                fontFamily:    "var(--font-cormorant), Georgia, serif",
-                fontSize:      22,
-                fontWeight:    300,
-                color:         "var(--cream)",
-                letterSpacing: "0.06em",
-              }}
-            >
-              Domaine
-            </span>
+            <img
+              src="https://ceimsgmzh6rmomfx.public.blob.vercel-storage.com/photos/1780978715619-5428C628-F649-4F06-9765-48AFF403A02C.png"
+              alt="Summit Lot"
+              style={{ height: 36, width: "auto", objectFit: "contain" }}
+            />
           </div>
           <p className="text-xs leading-relaxed mb-4" style={{ color: "rgba(237,232,223,0.35)" }}>
             Property Intelligence and Improvement Advisory for Southern California homeowners and investors.
@@ -90,7 +84,7 @@ export default function Footer() {
         style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}
       >
         <p className="text-xs" style={{ color: "rgba(237,232,223,0.2)", letterSpacing: "0.08em" }}>
-          © 2025 Domaine Co. · Advisory services only · Not a licensed contractor · DRE License Pending
+          © 2025 Summit Lot · Advisory services only · Not a licensed contractor · DRE License Pending
         </p>
         <p className="text-xs" style={{ color: "rgba(237,232,223,0.15)" }}>
           Jason Umana · San Diego County, CA

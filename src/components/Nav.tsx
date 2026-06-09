@@ -45,18 +45,12 @@ export default function Nav() {
         }}
       >
         {/* Logo */}
-        <Link
-          href="/"
-          style={{
-            fontFamily:  "var(--font-cormorant), Georgia, serif",
-            fontSize:    19,
-            fontWeight:  300,
-            color:       "#EDE8DF",
-            textDecoration: "none",
-            letterSpacing: "0.06em",
-          }}
-        >
-          Domaine
+        <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center" }}>
+          <img
+            src="https://ceimsgmzh6rmomfx.public.blob.vercel-storage.com/photos/1780978715619-5428C628-F649-4F06-9765-48AFF403A02C.png"
+            alt="Summit Lot"
+            style={{ height: 28, width: "auto", objectFit: "contain" }}
+          />
         </Link>
 
         {/* Center links */}

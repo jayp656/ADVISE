@@ -140,7 +140,7 @@ export default function ProjectShowcase() {
               fontFamily: "var(--font-dm-sans), sans-serif",
             }}
           >
-            Domaine Co. · Project Intelligence
+            Summit Lot · Project Intelligence
           </p>
 
           {/* Project selector tabs */}

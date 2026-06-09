@@ -220,7 +220,7 @@ export default function ProjectSpread() {
           letterSpacing: "0.1em",
           margin: 0,
         }}>
-          Domaine · Project Portfolio
+          Summit Lot · Project Portfolio
         </p>
       </div>
     </section>

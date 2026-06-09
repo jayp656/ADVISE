@@ -66,7 +66,7 @@ export default function DarkServicesSection() {
               letterSpacing: "-0.02em",
             }}
           >
-            How Domaine
+            How Summit Lot
             <br />
             <em>can help you.</em>
           </h2>

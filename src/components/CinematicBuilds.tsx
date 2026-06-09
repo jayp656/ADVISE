@@ -376,7 +376,7 @@ export default function CinematicBuilds() {
             maxWidth: 420,
           }}
         >
-          Scroll through six Domaine-analyzed properties. Each one started as an
+          Scroll through six Summit Lot-analyzed properties. Each one started as an
           ordinary San Diego home.
         </p>
       </div>
@@ -402,7 +402,7 @@ export default function CinematicBuilds() {
             letterSpacing: "0.1em",
           }}
         >
-          All projects Domaine-analyzed · Income and returns reflect individual outcomes and may vary
+          All projects Summit Lot-analyzed · Income and returns reflect individual outcomes and may vary
         </p>
       </div>
     </div>

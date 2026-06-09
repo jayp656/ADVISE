@@ -174,7 +174,7 @@ export default function Partners() {
             fontFamily: "var(--font-dm-sans), sans-serif",
           }}
         >
-          All partners independently licensed and vetted. Domaine Co. maintains no ownership interest in any partner firm.
+          All partners independently licensed and vetted. Summit Lot maintains no ownership interest in any partner firm.
         </p>
       </div>
     </section>

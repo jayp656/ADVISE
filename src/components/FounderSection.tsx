@@ -42,7 +42,7 @@ export default function FounderSection() {
             >
               <img
                 src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=88&fit=crop&crop=face"
-                alt="Jason Umana — Founder, Domaine Co."
+                alt="Jason Umana — Founder, Summit Lot"
                 className="w-full h-full object-cover object-top"
               />
               {/* Dark overlay for brand tone */}
@@ -113,7 +113,7 @@ export default function FounderSection() {
                   fontFamily: "var(--font-dm-sans), sans-serif",
                 }}
               >
-                Jason Umana founded Domaine Co. in 2019 after seeing firsthand
+                Jason Umana founded Summit Lot in 2019 after seeing firsthand
                 how many San Diego homeowners were leaving six-figure returns on
                 the table — not from lack of ambition, but from lack of
                 investment-grade analysis.
@@ -137,7 +137,7 @@ export default function FounderSection() {
                   fontFamily: "var(--font-dm-sans), sans-serif",
                 }}
               >
-                Domaine Co. is his bet that every Southern California property
+                Summit Lot is his bet that every Southern California property
                 owner deserves the same intelligence that institutional investors
                 take for granted.
               </p>

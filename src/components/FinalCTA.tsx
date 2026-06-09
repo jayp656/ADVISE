@@ -36,7 +36,7 @@ export default function FinalCTA() {
             fontFamily: "var(--font-dm-sans), sans-serif",
           }}
         >
-          Domaine Co. · San Diego County · Est. 2019
+          Summit Lot · San Diego County · Est. 2019
         </p>
         <h2
           className="font-light leading-none mb-8"
