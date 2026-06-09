@@ -52,11 +52,19 @@ const BUILDS = [
   },
   {
     num: "07",
-    title: "Felton Street",
-    location: "Mission Hills · San Diego",
-    type: "SB9 Lot Split",
-    metric: "2 units by-right",
-    image: "https://ceimsgmzh6rmomfx.public.blob.vercel-storage.com/photos/1780968436356-IMG_7841.jpeg",
+    title: "Encanto Drive",
+    location: "Encanto · San Diego",
+    type: "Detached ADU",
+    metric: "$2,750 / mo",
+    image: "https://ceimsgmzh6rmomfx.public.blob.vercel-storage.com/photos/1780969578661-IMG_7845.jpeg",
+  },
+  {
+    num: "08",
+    title: "Sunset Reserve",
+    location: "Mission Valley · San Diego",
+    type: "Detached ADU",
+    metric: "$3,100 / mo",
+    image: "https://ceimsgmzh6rmomfx.public.blob.vercel-storage.com/photos/1780969579854-IMG_7847.jpeg",
   },
 ];
 

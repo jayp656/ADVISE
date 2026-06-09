@@ -9,10 +9,10 @@ const CELLS = [
   { src: `${B}1780968428354-IMG_7839.jpeg`, label: "Garage ADU · Ocean Beach",        delay: 0.45 },
   { src: `${B}1780968423164-IMG_7838.jpeg`, label: "Detached ADU · Kensington",       delay: 0.15 },
   { src: `${B}1780968432147-IMG_7840.jpeg`, label: "Luxury ADU · La Jolla",           delay: 0.55 },
-  { src: `${B}1780936666215-IMG_7818.jpeg`, label: "Property · San Diego",            delay: 0.35 },
+  { src: `${B}1780969578661-IMG_7845.jpeg`,  label: "Detached ADU · Encanto",         delay: 0.35 },
   { src: `${B}1780968437686-IMG_7842.jpeg`, label: "Detached ADU · South Park",       delay: 0.65 },
   { src: `${B}1780968436356-IMG_7841.jpeg`, label: "SB9 Split · Mission Hills",       delay: 0.75 },
-  { src: `${B}1780936668685-IMG_7817.jpeg`, label: "Property · San Diego",            delay: 0.85 },
+  { src: `${B}1780969579854-IMG_7847.jpeg`, label: "Detached ADU · Mission Valley",   delay: 0.85 },
 ];
 
 export default function SectionNeighborhood() {

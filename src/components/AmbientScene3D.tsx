@@ -3,10 +3,29 @@
 // Mouse parallax set via CSS custom properties (one passive listener).
 import { useEffect, useRef, useState } from "react";
 
+const PLANS = [
+  {
+    url: "https://ceimsgmzh6rmomfx.public.blob.vercel-storage.com/photos/1780969573180-IMG_7826.png",
+    style: { top: "50%", left: "50%", width: "min(58%, 720px)", transform: "translate(-50%, -54%)", opacity: 0.13 },
+    parallaxFactor: 0.35,
+  },
+  {
+    url: "https://ceimsgmzh6rmomfx.public.blob.vercel-storage.com/photos/1780969565847-IMG_7824.png",
+    style: { top: "-4%", right: "-6%", width: "min(28%, 340px)", transform: "rotate(7deg)", opacity: 0.065 },
+    parallaxFactor: 0,
+  },
+  {
+    url: "https://ceimsgmzh6rmomfx.public.blob.vercel-storage.com/photos/1780969576574-IMG_7827.png",
+    style: { bottom: "18%", left: "-5%", width: "min(26%, 320px)", transform: "rotate(-6deg)", opacity: 0.055 },
+    parallaxFactor: 0,
+  },
+];
+
 export default function AmbientScene3D() {
   const sectionRef = useRef<HTMLElement>(null);
   const lightRef = useRef<HTMLDivElement>(null);
   const light2Ref = useRef<HTMLDivElement>(null);
+  const planRef = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
   // Scroll-in fade
@@ -21,8 +40,10 @@ export default function AmbientScene3D() {
     return () => obs.disconnect();
   }, []);
 
-  // Mouse parallax — pure CSS custom property, zero layout work
+  // Mouse parallax — skip on touch devices
   useEffect(() => {
+    if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+
     let raf = 0;
     let tx = 0, ty = 0, cx = 0, cy = 0;
 
@@ -41,6 +62,9 @@ export default function AmbientScene3D() {
       }
       if (light2Ref.current) {
         light2Ref.current.style.transform = `translate(calc(-50% + ${-cx * 0.6}px), calc(-50% + ${-cy * 0.6}px))`;
+      }
+      if (planRef.current) {
+        planRef.current.style.transform = `translate(calc(-50% + ${cx * 0.35}px), calc(-54% + ${cy * 0.35}px))`;
       }
     };
     tick();
@@ -148,6 +172,91 @@ export default function AmbientScene3D() {
         <line x1="54%" y1="25%" x2="72%" y2="72%" stroke="#9C8060" strokeWidth="0.5" opacity="0.6" />
       </svg>
 
+      {/* ── Floor plan blueprints (transparent overlay) ── */}
+
+      {/* Main plan — centered, parallax-tracked */}
+      <div
+        ref={planRef}
+        style={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          width: "min(58%, 720px)",
+          transform: "translate(-50%, -54%)",
+          opacity: visible ? 0.13 : 0,
+          pointerEvents: "none",
+          transition: "opacity 2.4s ease 0.6s",
+          willChange: "transform",
+        }}
+      >
+        <img
+          src={PLANS[0].url}
+          alt=""
+          aria-hidden
+          style={{
+            width: "100%",
+            height: "auto",
+            display: "block",
+            filter: "invert(1) sepia(0.45) saturate(1.8) hue-rotate(8deg) brightness(0.85)",
+            mixBlendMode: "screen",
+          }}
+        />
+      </div>
+
+      {/* Secondary plan — top right, partially cropped */}
+      <div
+        style={{
+          position: "absolute",
+          top: "-4%",
+          right: "-6%",
+          width: "min(28%, 340px)",
+          opacity: visible ? 0.065 : 0,
+          pointerEvents: "none",
+          transform: "rotate(7deg)",
+          transition: "opacity 2.4s ease 1s",
+        }}
+      >
+        <img
+          src={PLANS[1].url}
+          alt=""
+          aria-hidden
+          style={{
+            width: "100%",
+            height: "auto",
+            display: "block",
+            filter: "invert(1) sepia(0.3) brightness(0.8)",
+            mixBlendMode: "screen",
+          }}
+        />
+      </div>
+
+      {/* Tertiary plan — bottom left, partially cropped */}
+      <div
+        style={{
+          position: "absolute",
+          bottom: "18%",
+          left: "-5%",
+          width: "min(26%, 320px)",
+          opacity: visible ? 0.055 : 0,
+          pointerEvents: "none",
+          transform: "rotate(-6deg)",
+          transition: "opacity 2.4s ease 1.3s",
+        }}
+      >
+        <img
+          src={PLANS[2].url}
+          alt=""
+          aria-hidden
+          style={{
+            width: "100%",
+            height: "auto",
+            display: "block",
+            filter: "invert(1) sepia(0.3) brightness(0.8)",
+            mixBlendMode: "screen",
+          }}
+        />
+      </div>
+
       {/* ── Architectural corners / brackets ── */}
       {/* Top-left bracket */}
       <div style={{ position: "absolute", top: 48, left: 48, pointerEvents: "none" }}>
@@ -209,7 +318,7 @@ export default function AmbientScene3D() {
           bottom: 0,
           left: 0,
           right: 0,
-          padding: "0 52px 72px",
+          padding: "0 clamp(20px,4vw,52px) clamp(40px,6vw,72px)",
           zIndex: 2,
           opacity: visible ? 1 : 0,
           transform: visible ? "translateY(0)" : "translateY(18px)",
