@@ -227,6 +227,7 @@ export default function RootLayout({
       className={`${inter.variable} ${cormorant.variable} ${dmSans.variable}`}
     >
       <head>
+        <script dangerouslySetInnerHTML={{ __html: "history.scrollRestoration='manual';window.scrollTo(0,0);" }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

@@ -49,7 +49,7 @@ export default function Nav() {
           <img
             src="https://ceimsgmzh6rmomfx.public.blob.vercel-storage.com/photos/1780978715619-5428C628-F649-4F06-9765-48AFF403A02C.png"
             alt="Summit Lot"
-            style={{ height: 44, width: "auto", objectFit: "contain" }}
+            style={{ height: 42, width: 180, objectFit: "contain" }}
           />
         </Link>
 
