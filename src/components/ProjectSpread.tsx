@@ -27,10 +27,12 @@ export default function ProjectSpread() {
         style={{
           maxWidth: 1360,
           margin: "0 auto",
-          padding: "96px 48px 48px",
+          padding: "clamp(48px,8vw,96px) clamp(20px,4vw,48px) clamp(24px,4vw,48px)",
           display: "flex",
+          flexWrap: "wrap",
           justifyContent: "space-between",
           alignItems: "flex-end",
+          gap: 16,
           opacity: visible ? 1 : 0,
           transform: visible ? "translateY(0)" : "translateY(20px)",
           transition: "opacity 1s ease 0.1s, transform 1s ease 0.1s",
@@ -88,7 +90,7 @@ export default function ProjectSpread() {
           { label: "Payback Period", value: "3.4 yrs" },
         ].map((m, i) => (
           <div key={m.label} style={{
-            padding: "32px 48px",
+            padding: "24px clamp(16px,3vw,48px)",
             borderRight: i < 2 ? "1px solid rgba(237,232,223,0.06)" : "none",
           }}>
             <p style={{
@@ -196,8 +198,10 @@ export default function ProjectSpread() {
       <div style={{
         maxWidth: 1360,
         margin: "0 auto",
-        padding: "36px 48px 80px",
+        padding: "24px clamp(20px,4vw,48px) clamp(40px,6vw,80px)",
         display: "flex",
+        flexWrap: "wrap",
+        gap: 8,
         justifyContent: "space-between",
         alignItems: "center",
         borderTop: "1px solid rgba(237,232,223,0.05)",

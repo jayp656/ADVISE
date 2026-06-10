@@ -91,11 +91,12 @@ function GroupRows({ label, items, visible }: { label: string; items: StrategyIt
       {items.map((a) => (
         <div
           key={a.num}
+          className="strategy-row"
           style={{
             display: "grid",
-            gridTemplateColumns: "48px 1fr auto",
-            gap: "0 40px",
-            padding: "32px 0",
+            gridTemplateColumns: "40px 1fr auto",
+            gap: "0 clamp(16px, 3vw, 40px)",
+            padding: "28px 0",
             borderBottom: "1px solid rgba(237,232,223,0.06)",
             alignItems: "start",
             opacity: visible ? 1 : 0,
@@ -118,7 +119,7 @@ function GroupRows({ label, items, visible }: { label: string; items: StrategyIt
           <div>
             <p
               style={{
-                fontSize: 18,
+                fontSize: "clamp(15px, 2vw, 18px)",
                 fontWeight: 400,
                 color: "#EDE8DF",
                 fontFamily: "var(--font-dm-sans), sans-serif",
@@ -153,17 +154,16 @@ function GroupRows({ label, items, visible }: { label: string; items: StrategyIt
             </p>
           </div>
 
-          <div style={{ textAlign: "right", paddingTop: 2 }}>
+          <div className="strategy-metrics" style={{ textAlign: "right", paddingTop: 2 }}>
             <p
               style={{
                 fontFamily: "var(--font-cormorant), Georgia, serif",
-                fontSize: "clamp(22px, 2.2vw, 32px)",
+                fontSize: "clamp(18px, 2.2vw, 32px)",
                 fontWeight: 300,
                 color: "#EDE8DF",
                 letterSpacing: "-0.02em",
                 lineHeight: 1,
                 marginBottom: 6,
-                whiteSpace: "nowrap",
               }}
             >
               {a.primary}
@@ -174,7 +174,6 @@ function GroupRows({ label, items, visible }: { label: string; items: StrategyIt
                 color: "rgba(156,128,96,0.5)",
                 fontFamily: "var(--font-dm-sans), sans-serif",
                 letterSpacing: "0.06em",
-                whiteSpace: "nowrap",
               }}
             >
               {a.secondary}
@@ -274,7 +273,7 @@ export default function SectionOpportunities() {
         style={{
           maxWidth: 1360,
           margin: "0 auto",
-          padding: "0 48px 96px",
+          padding: "0 clamp(20px, 4vw, 48px) clamp(60px, 8vw, 96px)",
         }}
       >
         {/* Headline */}

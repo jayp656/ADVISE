@@ -70,10 +70,10 @@ export default function SectionFinalMoment() {
       {(["tl","tr","bl","br"] as const).map((pos, i) => (
         <div key={pos} style={{
           position: "absolute", zIndex: 3, width: 22, height: 22,
-          top: pos.startsWith("t") ? 40 : undefined,
-          bottom: pos.startsWith("b") ? 40 : undefined,
-          left: pos.endsWith("l") ? 48 : undefined,
-          right: pos.endsWith("r") ? 48 : undefined,
+          top: pos.startsWith("t") ? "max(24px, 3vh)" : undefined,
+          bottom: pos.startsWith("b") ? "max(24px, 3vh)" : undefined,
+          left: pos.endsWith("l") ? "clamp(20px, 4vw, 48px)" : undefined,
+          right: pos.endsWith("r") ? "clamp(20px, 4vw, 48px)" : undefined,
           borderTop: pos.startsWith("t") ? "1px solid rgba(156,128,96,0.3)" : undefined,
           borderBottom: pos.startsWith("b") ? "1px solid rgba(156,128,96,0.3)" : undefined,
           borderLeft: pos.endsWith("l") ? "1px solid rgba(156,128,96,0.3)" : undefined,
@@ -99,7 +99,7 @@ export default function SectionFinalMoment() {
           zIndex: 2,
           maxWidth: 1360,
           margin: "0 auto",
-          padding: "120px 48px",
+          padding: "clamp(60px,10vw,120px) clamp(20px,4vw,48px)",
           width: "100%",
           display: "flex",
           flexDirection: "column",

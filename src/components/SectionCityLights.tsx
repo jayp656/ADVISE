@@ -176,7 +176,7 @@ export default function SectionCityLights() {
           zIndex: 2,
           maxWidth: 1360,
           margin: "0 auto",
-          padding: "120px 48px",
+          padding: "clamp(60px,10vw,120px) clamp(20px,4vw,48px)",
           width: "100%",
           display: "flex",
           justifyContent: "flex-end",

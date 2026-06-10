@@ -170,7 +170,7 @@ export default function SectionHero() {
           height: "100%",
           maxWidth: 1360,
           margin: "0 auto",
-          padding: "0 48px 96px",
+          padding: "0 clamp(20px,4vw,48px) clamp(60px,8vw,96px)",
           display: "flex",
           flexDirection: "column",
           justifyContent: "flex-end",

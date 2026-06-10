@@ -133,6 +133,19 @@ body {
   }
 }
 
+/* Strategy rows — hide metrics column on smallest screens, stack below */
+@media (max-width: 639px) {
+  .strategy-row {
+    grid-template-columns: 32px 1fr !important;
+  }
+  .strategy-metrics {
+    grid-column: 2 !important;
+    text-align: left !important;
+    padding-top: 12px !important;
+    padding-bottom: 4px !important;
+  }
+}
+
 /* Mobile gallery scrollbar hide */
 .mob-gallery::-webkit-scrollbar { display: none; }
 
